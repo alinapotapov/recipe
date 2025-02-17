@@ -3,6 +3,7 @@ part of '../app_bloc.dart';
 @freezed
 class AppEvent with _$AppEvent {
   const factory AppEvent.started() = _Started;
-  const factory AppEvent.increment() = _Increment;
-  const factory AppEvent.decrement() = _Decrement;
+  const factory AppEvent.login() = _Login;
+  const factory AppEvent.logout() = _Logout;
+  const factory AppEvent.registration() = _Registration;
 }

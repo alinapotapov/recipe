@@ -19,44 +19,50 @@ mixin _$AppEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function() increment,
-    required TResult Function() decrement,
+    required TResult Function() login,
+    required TResult Function() logout,
+    required TResult Function() registration,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function()? increment,
-    TResult? Function()? decrement,
+    TResult? Function()? login,
+    TResult? Function()? logout,
+    TResult? Function()? registration,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function()? increment,
-    TResult Function()? decrement,
+    TResult Function()? login,
+    TResult Function()? logout,
+    TResult Function()? registration,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
-    required TResult Function(_Increment value) increment,
-    required TResult Function(_Decrement value) decrement,
+    required TResult Function(_Login value) login,
+    required TResult Function(_Logout value) logout,
+    required TResult Function(_Registration value) registration,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
-    TResult? Function(_Increment value)? increment,
-    TResult? Function(_Decrement value)? decrement,
+    TResult? Function(_Login value)? login,
+    TResult? Function(_Logout value)? logout,
+    TResult? Function(_Registration value)? registration,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
-    TResult Function(_Increment value)? increment,
-    TResult Function(_Decrement value)? decrement,
+    TResult Function(_Login value)? login,
+    TResult Function(_Logout value)? logout,
+    TResult Function(_Registration value)? registration,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -118,8 +124,9 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function() increment,
-    required TResult Function() decrement,
+    required TResult Function() login,
+    required TResult Function() logout,
+    required TResult Function() registration,
   }) {
     return started();
   }
@@ -128,8 +135,9 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function()? increment,
-    TResult? Function()? decrement,
+    TResult? Function()? login,
+    TResult? Function()? logout,
+    TResult? Function()? registration,
   }) {
     return started?.call();
   }
@@ -138,8 +146,9 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function()? increment,
-    TResult Function()? decrement,
+    TResult Function()? login,
+    TResult Function()? logout,
+    TResult Function()? registration,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -152,8 +161,9 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
-    required TResult Function(_Increment value) increment,
-    required TResult Function(_Decrement value) decrement,
+    required TResult Function(_Login value) login,
+    required TResult Function(_Logout value) logout,
+    required TResult Function(_Registration value) registration,
   }) {
     return started(this);
   }
@@ -162,8 +172,9 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
-    TResult? Function(_Increment value)? increment,
-    TResult? Function(_Decrement value)? decrement,
+    TResult? Function(_Login value)? login,
+    TResult? Function(_Logout value)? logout,
+    TResult? Function(_Registration value)? registration,
   }) {
     return started?.call(this);
   }
@@ -172,8 +183,9 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
-    TResult Function(_Increment value)? increment,
-    TResult Function(_Decrement value)? decrement,
+    TResult Function(_Login value)? login,
+    TResult Function(_Logout value)? logout,
+    TResult Function(_Registration value)? registration,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -188,35 +200,35 @@ abstract class _Started implements AppEvent {
 }
 
 /// @nodoc
-abstract class _$$IncrementImplCopyWith<$Res> {
-  factory _$$IncrementImplCopyWith(
-          _$IncrementImpl value, $Res Function(_$IncrementImpl) then) =
-      __$$IncrementImplCopyWithImpl<$Res>;
+abstract class _$$LoginImplCopyWith<$Res> {
+  factory _$$LoginImplCopyWith(
+          _$LoginImpl value, $Res Function(_$LoginImpl) then) =
+      __$$LoginImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$IncrementImplCopyWithImpl<$Res>
-    extends _$AppEventCopyWithImpl<$Res, _$IncrementImpl>
-    implements _$$IncrementImplCopyWith<$Res> {
-  __$$IncrementImplCopyWithImpl(
-      _$IncrementImpl _value, $Res Function(_$IncrementImpl) _then)
+class __$$LoginImplCopyWithImpl<$Res>
+    extends _$AppEventCopyWithImpl<$Res, _$LoginImpl>
+    implements _$$LoginImplCopyWith<$Res> {
+  __$$LoginImplCopyWithImpl(
+      _$LoginImpl _value, $Res Function(_$LoginImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$IncrementImpl implements _Increment {
-  const _$IncrementImpl();
+class _$LoginImpl implements _Login {
+  const _$LoginImpl();
 
   @override
   String toString() {
-    return 'AppEvent.increment()';
+    return 'AppEvent.login()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$IncrementImpl);
+        (other.runtimeType == runtimeType && other is _$LoginImpl);
   }
 
   @override
@@ -226,32 +238,35 @@ class _$IncrementImpl implements _Increment {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function() increment,
-    required TResult Function() decrement,
+    required TResult Function() login,
+    required TResult Function() logout,
+    required TResult Function() registration,
   }) {
-    return increment();
+    return login();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function()? increment,
-    TResult? Function()? decrement,
+    TResult? Function()? login,
+    TResult? Function()? logout,
+    TResult? Function()? registration,
   }) {
-    return increment?.call();
+    return login?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function()? increment,
-    TResult Function()? decrement,
+    TResult Function()? login,
+    TResult Function()? logout,
+    TResult Function()? registration,
     required TResult orElse(),
   }) {
-    if (increment != null) {
-      return increment();
+    if (login != null) {
+      return login();
     }
     return orElse();
   }
@@ -260,71 +275,74 @@ class _$IncrementImpl implements _Increment {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
-    required TResult Function(_Increment value) increment,
-    required TResult Function(_Decrement value) decrement,
+    required TResult Function(_Login value) login,
+    required TResult Function(_Logout value) logout,
+    required TResult Function(_Registration value) registration,
   }) {
-    return increment(this);
+    return login(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
-    TResult? Function(_Increment value)? increment,
-    TResult? Function(_Decrement value)? decrement,
+    TResult? Function(_Login value)? login,
+    TResult? Function(_Logout value)? logout,
+    TResult? Function(_Registration value)? registration,
   }) {
-    return increment?.call(this);
+    return login?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
-    TResult Function(_Increment value)? increment,
-    TResult Function(_Decrement value)? decrement,
+    TResult Function(_Login value)? login,
+    TResult Function(_Logout value)? logout,
+    TResult Function(_Registration value)? registration,
     required TResult orElse(),
   }) {
-    if (increment != null) {
-      return increment(this);
+    if (login != null) {
+      return login(this);
     }
     return orElse();
   }
 }
 
-abstract class _Increment implements AppEvent {
-  const factory _Increment() = _$IncrementImpl;
+abstract class _Login implements AppEvent {
+  const factory _Login() = _$LoginImpl;
 }
 
 /// @nodoc
-abstract class _$$DecrementImplCopyWith<$Res> {
-  factory _$$DecrementImplCopyWith(
-          _$DecrementImpl value, $Res Function(_$DecrementImpl) then) =
-      __$$DecrementImplCopyWithImpl<$Res>;
+abstract class _$$LogoutImplCopyWith<$Res> {
+  factory _$$LogoutImplCopyWith(
+          _$LogoutImpl value, $Res Function(_$LogoutImpl) then) =
+      __$$LogoutImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$DecrementImplCopyWithImpl<$Res>
-    extends _$AppEventCopyWithImpl<$Res, _$DecrementImpl>
-    implements _$$DecrementImplCopyWith<$Res> {
-  __$$DecrementImplCopyWithImpl(
-      _$DecrementImpl _value, $Res Function(_$DecrementImpl) _then)
+class __$$LogoutImplCopyWithImpl<$Res>
+    extends _$AppEventCopyWithImpl<$Res, _$LogoutImpl>
+    implements _$$LogoutImplCopyWith<$Res> {
+  __$$LogoutImplCopyWithImpl(
+      _$LogoutImpl _value, $Res Function(_$LogoutImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$DecrementImpl implements _Decrement {
-  const _$DecrementImpl();
+class _$LogoutImpl implements _Logout {
+  const _$LogoutImpl();
 
   @override
   String toString() {
-    return 'AppEvent.decrement()';
+    return 'AppEvent.logout()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$DecrementImpl);
+        (other.runtimeType == runtimeType && other is _$LogoutImpl);
   }
 
   @override
@@ -334,32 +352,35 @@ class _$DecrementImpl implements _Decrement {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function() increment,
-    required TResult Function() decrement,
+    required TResult Function() login,
+    required TResult Function() logout,
+    required TResult Function() registration,
   }) {
-    return decrement();
+    return logout();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function()? increment,
-    TResult? Function()? decrement,
+    TResult? Function()? login,
+    TResult? Function()? logout,
+    TResult? Function()? registration,
   }) {
-    return decrement?.call();
+    return logout?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function()? increment,
-    TResult Function()? decrement,
+    TResult Function()? login,
+    TResult Function()? logout,
+    TResult Function()? registration,
     required TResult orElse(),
   }) {
-    if (decrement != null) {
-      return decrement();
+    if (logout != null) {
+      return logout();
     }
     return orElse();
   }
@@ -368,39 +389,156 @@ class _$DecrementImpl implements _Decrement {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
-    required TResult Function(_Increment value) increment,
-    required TResult Function(_Decrement value) decrement,
+    required TResult Function(_Login value) login,
+    required TResult Function(_Logout value) logout,
+    required TResult Function(_Registration value) registration,
   }) {
-    return decrement(this);
+    return logout(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
-    TResult? Function(_Increment value)? increment,
-    TResult? Function(_Decrement value)? decrement,
+    TResult? Function(_Login value)? login,
+    TResult? Function(_Logout value)? logout,
+    TResult? Function(_Registration value)? registration,
   }) {
-    return decrement?.call(this);
+    return logout?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
-    TResult Function(_Increment value)? increment,
-    TResult Function(_Decrement value)? decrement,
+    TResult Function(_Login value)? login,
+    TResult Function(_Logout value)? logout,
+    TResult Function(_Registration value)? registration,
     required TResult orElse(),
   }) {
-    if (decrement != null) {
-      return decrement(this);
+    if (logout != null) {
+      return logout(this);
     }
     return orElse();
   }
 }
 
-abstract class _Decrement implements AppEvent {
-  const factory _Decrement() = _$DecrementImpl;
+abstract class _Logout implements AppEvent {
+  const factory _Logout() = _$LogoutImpl;
+}
+
+/// @nodoc
+abstract class _$$RegistrationImplCopyWith<$Res> {
+  factory _$$RegistrationImplCopyWith(
+          _$RegistrationImpl value, $Res Function(_$RegistrationImpl) then) =
+      __$$RegistrationImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$RegistrationImplCopyWithImpl<$Res>
+    extends _$AppEventCopyWithImpl<$Res, _$RegistrationImpl>
+    implements _$$RegistrationImplCopyWith<$Res> {
+  __$$RegistrationImplCopyWithImpl(
+      _$RegistrationImpl _value, $Res Function(_$RegistrationImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$RegistrationImpl implements _Registration {
+  const _$RegistrationImpl();
+
+  @override
+  String toString() {
+    return 'AppEvent.registration()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$RegistrationImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() login,
+    required TResult Function() logout,
+    required TResult Function() registration,
+  }) {
+    return registration();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? login,
+    TResult? Function()? logout,
+    TResult? Function()? registration,
+  }) {
+    return registration?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? login,
+    TResult Function()? logout,
+    TResult Function()? registration,
+    required TResult orElse(),
+  }) {
+    if (registration != null) {
+      return registration();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_Login value) login,
+    required TResult Function(_Logout value) logout,
+    required TResult Function(_Registration value) registration,
+  }) {
+    return registration(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_Login value)? login,
+    TResult? Function(_Logout value)? logout,
+    TResult? Function(_Registration value)? registration,
+  }) {
+    return registration?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_Login value)? login,
+    TResult Function(_Logout value)? logout,
+    TResult Function(_Registration value)? registration,
+    required TResult orElse(),
+  }) {
+    if (registration != null) {
+      return registration(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Registration implements AppEvent {
+  const factory _Registration() = _$RegistrationImpl;
 }
 
 /// @nodoc
@@ -409,18 +547,24 @@ mixin _$AppState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(int count) value,
+    required TResult Function() loading,
+    required TResult Function() loaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(int count)? value,
+    TResult? Function()? loading,
+    TResult? Function()? loaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(int count)? value,
+    TResult Function()? loading,
+    TResult Function()? loaded,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -428,18 +572,24 @@ mixin _$AppState {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Value value) value,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Loaded value) loaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Value value)? value,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Loaded value)? loaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Value value)? value,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Loaded value)? loaded,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -502,6 +652,8 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(int count) value,
+    required TResult Function() loading,
+    required TResult Function() loaded,
   }) {
     return initial();
   }
@@ -511,6 +663,8 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(int count)? value,
+    TResult? Function()? loading,
+    TResult? Function()? loaded,
   }) {
     return initial?.call();
   }
@@ -520,6 +674,8 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(int count)? value,
+    TResult Function()? loading,
+    TResult Function()? loaded,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -533,6 +689,8 @@ class _$InitialImpl implements _Initial {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Value value) value,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Loaded value) loaded,
   }) {
     return initial(this);
   }
@@ -542,6 +700,8 @@ class _$InitialImpl implements _Initial {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Value value)? value,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Loaded value)? loaded,
   }) {
     return initial?.call(this);
   }
@@ -551,6 +711,8 @@ class _$InitialImpl implements _Initial {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Value value)? value,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Loaded value)? loaded,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -630,6 +792,8 @@ class _$ValueImpl implements _Value {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(int count) value,
+    required TResult Function() loading,
+    required TResult Function() loaded,
   }) {
     return value(count);
   }
@@ -639,6 +803,8 @@ class _$ValueImpl implements _Value {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(int count)? value,
+    TResult? Function()? loading,
+    TResult? Function()? loaded,
   }) {
     return value?.call(count);
   }
@@ -648,6 +814,8 @@ class _$ValueImpl implements _Value {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(int count)? value,
+    TResult Function()? loading,
+    TResult Function()? loaded,
     required TResult orElse(),
   }) {
     if (value != null) {
@@ -661,6 +829,8 @@ class _$ValueImpl implements _Value {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Value value) value,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Loaded value) loaded,
   }) {
     return value(this);
   }
@@ -670,6 +840,8 @@ class _$ValueImpl implements _Value {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Value value)? value,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Loaded value)? loaded,
   }) {
     return value?.call(this);
   }
@@ -679,6 +851,8 @@ class _$ValueImpl implements _Value {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Value value)? value,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Loaded value)? loaded,
     required TResult orElse(),
   }) {
     if (value != null) {
@@ -695,4 +869,232 @@ abstract class _Value implements AppState {
   @JsonKey(ignore: true)
   _$$ValueImplCopyWith<_$ValueImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$LoadingImplCopyWith<$Res> {
+  factory _$$LoadingImplCopyWith(
+          _$LoadingImpl value, $Res Function(_$LoadingImpl) then) =
+      __$$LoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$LoadingImplCopyWithImpl<$Res>
+    extends _$AppStateCopyWithImpl<$Res, _$LoadingImpl>
+    implements _$$LoadingImplCopyWith<$Res> {
+  __$$LoadingImplCopyWithImpl(
+      _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$LoadingImpl implements _Loading {
+  const _$LoadingImpl();
+
+  @override
+  String toString() {
+    return 'AppState.loading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$LoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(int count) value,
+    required TResult Function() loading,
+    required TResult Function() loaded,
+  }) {
+    return loading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(int count)? value,
+    TResult? Function()? loading,
+    TResult? Function()? loaded,
+  }) {
+    return loading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(int count)? value,
+    TResult Function()? loading,
+    TResult Function()? loaded,
+    required TResult orElse(),
+  }) {
+    if (loading != null) {
+      return loading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Value value) value,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Loaded value) loaded,
+  }) {
+    return loading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Value value)? value,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Loaded value)? loaded,
+  }) {
+    return loading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Value value)? value,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Loaded value)? loaded,
+    required TResult orElse(),
+  }) {
+    if (loading != null) {
+      return loading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Loading implements AppState {
+  const factory _Loading() = _$LoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$LoadedImplCopyWith<$Res> {
+  factory _$$LoadedImplCopyWith(
+          _$LoadedImpl value, $Res Function(_$LoadedImpl) then) =
+      __$$LoadedImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$LoadedImplCopyWithImpl<$Res>
+    extends _$AppStateCopyWithImpl<$Res, _$LoadedImpl>
+    implements _$$LoadedImplCopyWith<$Res> {
+  __$$LoadedImplCopyWithImpl(
+      _$LoadedImpl _value, $Res Function(_$LoadedImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$LoadedImpl implements _Loaded {
+  const _$LoadedImpl();
+
+  @override
+  String toString() {
+    return 'AppState.loaded()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$LoadedImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(int count) value,
+    required TResult Function() loading,
+    required TResult Function() loaded,
+  }) {
+    return loaded();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(int count)? value,
+    TResult? Function()? loading,
+    TResult? Function()? loaded,
+  }) {
+    return loaded?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(int count)? value,
+    TResult Function()? loading,
+    TResult Function()? loaded,
+    required TResult orElse(),
+  }) {
+    if (loaded != null) {
+      return loaded();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Value value) value,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Loaded value) loaded,
+  }) {
+    return loaded(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Value value)? value,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Loaded value)? loaded,
+  }) {
+    return loaded?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Value value)? value,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Loaded value)? loaded,
+    required TResult orElse(),
+  }) {
+    if (loaded != null) {
+      return loaded(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Loaded implements AppState {
+  const factory _Loaded() = _$LoadedImpl;
 }

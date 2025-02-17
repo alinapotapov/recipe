@@ -5,17 +5,15 @@ part 'event/app_event.dart';
 part 'state/app_state.dart';
 part 'app_bloc.freezed.dart';
 
-class AppBloc extends Bloc<AppEvent, AppState> {
-  AppBloc() : super(const AppState.initial()) {
-    on<_Started>((event, emit) {
+class AuthBloc extends Bloc<AppEvent, AppState> {
+  AuthBloc() : super(const AppState.initial()) {
+    on<_Login>((event, emit) {
       emit(const AppState.initial());
     });
 
-    on<_Increment>((event, emit) {
-      //TODO
-    });
+    on<_Logout>((event, emit) {});
 
-    on<_Decrement>((event, emit) {
+    on<_Registration>((event, emit) {
       //TODO
     });
   }
