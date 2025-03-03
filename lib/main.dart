@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:recipe_app/presentation/views/start_page.dart';
+import 'package:recipe_app/presentation/views/home.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:recipe_app/utils/get_it.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -8,6 +9,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  setup();
   runApp(const MyApp());
 }
 
@@ -23,7 +25,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const StartPage(),
+      home: const Home(),
     );
   }
 }

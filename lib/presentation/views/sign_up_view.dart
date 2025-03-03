@@ -1,6 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get_it/get_it.dart';
+import 'package:recipe_app/data/services/auth_service.dart';
 
 class SignUpView extends StatelessWidget {
   const SignUpView({super.key});
@@ -174,6 +176,8 @@ class _SignUpFormState extends State<SignUpForm> {
   final _formKey = GlobalKey<FormState>();
 
   bool _obscureText = true;
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -199,6 +203,7 @@ class _SignUpFormState extends State<SignUpForm> {
 
           // Email Field
           TextFormField(
+            controller: _emailController,
             onSaved: (value) {},
             textInputAction: TextInputAction.next,
             keyboardType: TextInputType.emailAddress,
@@ -216,6 +221,7 @@ class _SignUpFormState extends State<SignUpForm> {
 
           // Password Field
           TextFormField(
+            controller: _passwordController,
             obscureText: _obscureText,
             textInputAction: TextInputAction.next,
             onChanged: (value) {},
@@ -268,7 +274,12 @@ class _SignUpFormState extends State<SignUpForm> {
           const SizedBox(height: 16),
           // Sign Up Button
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              GetIt.I<AuthService>().signup(
+                  email: _emailController.text,
+                  password: _passwordController.text,
+                  context: context);
+            },
             style: ElevatedButton.styleFrom(
               backgroundColor: const Color(0xFF22A45D),
               foregroundColor: Colors.white,

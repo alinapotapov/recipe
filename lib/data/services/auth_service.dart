@@ -17,7 +17,7 @@ class AuthService {
       Navigator.pushReplacement(context,
           MaterialPageRoute(builder: (BuildContext context) => const Home()));
     } on FirebaseAuthException catch (e) {
-      String message = '';
+      String message = e.message.toString();
       if (e.code == 'weak-password') {
         message = 'The password provided is too weak.';
       } else if (e.code == 'email-already-in-use') {
